@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "612178911805",
+    "firebase_url": "https://fir-f53f7.firebaseio.com",
+    "project_id": "fir-f53f7",
+    "storage_bucket": "fir-f53f7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:612178911805:android:ac9e67bed083a73ab90054",
+        "android_client_info": {
+          "package_name": "com.haminh.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "612178911805-rlqn0cjffolu55h33bedncnai8bi59ne.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.haminh.app",
+            "certificate_hash": "cca39c9807a4a02a0ef07e28bff4ca67feacb5b6"
+          }
+        },
+        {
+          "client_id": "612178911805-6ikuk7dbukvma798hq6or2j9p3595a6q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTOp9doOS4-7ciK2Ckt5qf8Wj6jQhtZ4Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "612178911805-6ikuk7dbukvma798hq6or2j9p3595a6q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
