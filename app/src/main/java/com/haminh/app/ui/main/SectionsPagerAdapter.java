@@ -2,6 +2,7 @@ package com.haminh.app.ui.main;
 
 import android.app.Application;
 import android.content.Context;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 
@@ -38,15 +39,14 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         // getItem is called to instantiate the fragment for the given page.
         // Return a PlaceholderFragment (defined as a static inner class below).
-        HienThiSach hienThiSach = new HienThiSach(books);
 
+        HienThiSach hienThiSach = new HienThiSach(books);
+        GioHang gioHang=new GioHang(books);
+        ThanhToan thanhToan=new ThanhToan(books);
         switch (position){
             case 0: return hienThiSach;
-            case 1: {
-
-                GioHang gioHang=new GioHang(books);
-                return gioHang;
-            }
+            case 1: return gioHang;
+            case 2: return thanhToan;
             default: return PlaceholderFragment.newInstance(1);
         }
 

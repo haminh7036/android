@@ -17,16 +17,16 @@ import com.haminh.app.ui.main.SectionsPagerAdapter;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity  {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
-        SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
+        final SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
 
-        ViewPager viewPager = findViewById(R.id.view_pager);
+        final ViewPager viewPager = findViewById(R.id.view_pager);
 
         viewPager.setAdapter(sectionsPagerAdapter);
 
@@ -44,4 +44,6 @@ public class MainActivity extends AppCompatActivity {
 //            }
 //        });
     }
+
+
 }

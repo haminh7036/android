@@ -24,7 +24,7 @@ public class Book {
     public static ArrayList<Book> getData(){
         ArrayList<Book> books=new ArrayList<>();
         int[] ids={0,1,2,3};
-        String [] names={"Tận thế nếu không bận, anh cứu chúng em nhé?","Your name","Ngày mai tôi biến mất","Hành trình của Elaina"};
+        String [] names={"Kết thúc","Your name","Ngày mai ","Hành trình"};
         int[] images={R.drawable.demo,R.drawable.demo2,R.drawable.demo3,R.drawable.demo4};
         int[] costs={70000,50000,60000,85000};
         for (int i=0;i<names.length;i++){

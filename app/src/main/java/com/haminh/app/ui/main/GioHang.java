@@ -8,6 +8,7 @@ import com.haminh.app.ui.main.HienThiSach;
 import android.os.Bundle;
 import android.util.EventLog;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -22,9 +23,9 @@ import androidx.fragment.app.Fragment;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GioHang extends Fragment implements AdapterView.OnItemClickListener {
+public class GioHang extends Fragment  {
     ListView lvGioHang;
-    Button btnTang,btnGiam;
+    //Button btnTang,btnGiam;
     View root;
     public ArrayList<Book> books= new ArrayList<>();
     public GioHang(ArrayList<Book> books) {
@@ -38,38 +39,16 @@ public class GioHang extends Fragment implements AdapterView.OnItemClickListener
 
         root = inflater.inflate(R.layout.gio_hang, container, false);
         lvGioHang = (ListView) root.findViewById(R.id.lvGioHang);
-        GioHangAdapter adapter= new GioHangAdapter(this.getContext(),books);
-        lvGioHang.setAdapter(adapter);
-
-        lvGioHang.setOnItemClickListener(this);
-        //lvGioHang.invalidateViews();
+        lvGioHang.setAdapter(new GioHangAdapter(this.getContext(),books));
+        lvGioHang.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                lvGioHang = (ListView) root.findViewById(R.id.lvGioHang);
+                lvGioHang.setAdapter(new GioHangAdapter(getContext(),books));
+            }
+        });
         return root;
-
-
     }
 
-
-    @Override
-    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-        final int pos=position;
-
-        if(view.getId()==R.id.lvGioHang){
-            btnTang=lvGioHang.findViewById(R.id.btnTang);
-            btnGiam=lvGioHang.findViewById(R.id.btnGiam);
-            lvGioHang.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                @Override
-                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    if(view.getId()==R.id.btnTang)
-                        books.get(pos).soLuong++;
-                    if(view.getId()==R.id.btnGiam)
-                        books.get(pos).soLuong--;
-                }
-            });
-        }
-        lvGioHang = (ListView) root.findViewById(R.id.lvGioHang);
-        GioHangAdapter adapter= new GioHangAdapter(this.getContext(),books);
-        lvGioHang.setAdapter(adapter);
-    }
 }
 
